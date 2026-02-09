@@ -82,3 +82,21 @@ Unbounded
 Cascadia Code
 
 Ambas licenciadas bajo SIL Open Font License (OFL), permitiendo uso comercial y no comercial, modificación y redistribución respetando la licencia.
+
+---
+
+## Funcionalidades destacadas
+
+Renderizado dinámico de productos desde JSON local
+
+Carrito de compras con persistencia en localStorage
+
+Búsqueda por texto y por voz
+
+Filtrado por categoría
+
+Login y registro de usuarios con validación
+
+Banner de cookies conforme a buenas prácticas RGPD
+
+Páginas legales (Aviso legal, Política de privacidad, Condiciones de uso)
