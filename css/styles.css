@@ -1,0 +1,258 @@
+/*------FONTS------*/
+
+    /*CASCADIA CODE: Text font*/
+    @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+    /*UNBOUNDED: Display font*/
+    @font-face {
+        font-family: 'Unbounded';
+        src: url('/feitinho/assets/fonts/Unbounded/Unbounded-ExtraLight.ttf') format('truetype');
+        font-weight: 200;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Unbounded';
+        src: url('/feitinho/assets/fonts/Unbounded/Unbounded-Light.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Unbounded';
+        src: url('/feitinho/assets/fonts/Unbounded/Unbounded-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Unbounded';
+        src: url('/feitinho/assets/fonts/Unbounded/Unbounded-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Unbounded';
+        src: url('/feitinho/assets/fonts/Unbounded/Unbounded-SemiBold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Unbounded';
+        src: url('/feitinho/assets/fonts/Unbounded/Unbounded-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Unbounded';
+        src: url('/feitinho/assets/fonts/Unbounded/Unbounded-ExtraBold.ttf') format('truetype');
+        font-weight: 800;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Unbounded';
+        src: url('/feitinho/assets/fonts/Unbounded/Unbounded-Black.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+    }
+
+:root{
+    --rosa-ft: #ff614f;
+}
+.bg-ft{
+    background-color: var(--rosa-ft);
+}
+.text-ft{
+    color: var(--rosa-ft);
+}
+.border-ft{
+    border: solid 3px var(--rosa-ft);
+    border-radius: 0;
+}
+.bordert-ft{
+    border-top: solid 3px var(--rosa-ft);
+    border-radius: 0;
+}
+.btn-ft{
+    background-color: var(--rosa-ft);
+    color: white;
+    border: solid 3px var(--rosa-ft);
+    border-radius: 0;
+    text-transform: uppercase;
+}
+    .btn-ft:hover{
+        color: var(--rosa-ft);
+        border: solid 3px var(--rosa-ft);
+        border-radius: 0;
+        background-color: white;
+    }
+/*--------------------------CSS--------------------------*/
+body{
+    font-family: 'Cascadia Code';
+    font-weight: 300;
+}
+h1{
+    font-family: 'Unbounded';
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+}
+
+.marquee{
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.text-loop{
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 16s linear infinite;
+}
+@keyframes marquee {
+    0%{ transform: translate(0, 0); }
+    100%{ transform: translate(-100%, 0); }
+}
+
+.icono{
+    transition: 100ms ease-out;
+}
+    .icono:hover{
+        transform: translate();
+        transform: scale(1.1);
+    }
+
+/*-----AVISO COOKIES-----*/
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--rosa-ft);
+    color: #fff;
+    font-weight: 800;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.cookie-banner a {
+    color: #fff;
+    font-weight: 200;
+}
+.cookie-banner a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*-----HEADER-----*/
+#headerNav a{
+    color: var(--rosa-ft);
+}
+#headerNav a:hover, a:active{
+    color: var(--rosa-ft);
+    text-decoration: underline;
+}
+
+.btn-close {
+    --bs-btn-close-color: var(--rosa-ft);
+    --bs-btn-close-bg: none;
+    filter: none;
+}
+
+
+/*----TIENDA----*/
+.nav-link{
+    color: var(--rosa-ft);
+    cursor: pointer;
+    font-weight: 500;
+}
+    .nav-link:hover{
+        color: var(--rosa-ft);
+        text-decoration: underline;
+    }
+.imgCarta{
+    width: 100%;
+    display: block;
+    transition: transform .4s ease, filter 0.3s ease;
+}
+
+.card-top:hover .imgCarta{
+    transform: scale(1.1);
+    filter: brightness(70%);
+}
+
+.talla-div{
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.card-top:hover .talla-div{
+    opacity: 1;
+}
+.btn-talla{
+    height: 20%;
+    transition: opacity .3s ease;
+
+    border: solid 2px white;
+    border-radius: 0;
+    color: white;
+    background: transparent;
+    padding: 6px 13px;
+}
+    .btn-talla:hover{
+        background-color: white;
+        border: solid 2px white;
+        color: gray;
+    }
+
+/*-----DETALLE PRODUCTO-----*/
+.img-det{
+    width: 40%;
+    height: auto;
+}
+.precio{
+    font-weight: 300;
+    font-size: 1.9rem;
+}
+.tallaActive{
+    color: var(--rosa-ft);
+    background-color: white;
+}
+
+
+
+/*-----FOOTER-----*/
+#footerDiv{
+    background-color: var(--rosa-ft);
+    height: 20rem;
+    color: white;
+}
+#navFooter a:hover{
+    text-decoration: underline;
+}
+#footerInfo a{
+    font-weight: 500;
+    color: white;
+}
+#footerNav a{
+    color: #ffffff;
+}
+#footerNav a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+#footerInfo a:hover{
+    text-decoration: underline;
+}
